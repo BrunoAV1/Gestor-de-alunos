@@ -2,7 +2,7 @@
 Este é um sistema web completo para a gestão de alunos, desenvolvido como um projeto pessoal para demonstrar habilidades em desenvolvimento backend com Java e o ecossistema Spring. A aplicação implementa todas as operações de um CRUD (Create, Read, Update, Delete) e inclui funcionalidades avançadas para garantir uma experiência de usuário robusta e profissional.<br>
 O sistema foi construído seguindo as melhores práticas de desenvolvimento, como a separação de responsabilidades em camadas (Controller, Service, Repository), validação de dados no backend e frontend, e tratamento de exceções centralizado.
 
-URL da Aplicação em Produção:
+
 
 ### ✨ Funcionalidades Implementadas
 ---
@@ -41,7 +41,7 @@ Este projeto foi construído com um stack de tecnologias moderno e amplamente ut
     * <strong>Bootstrap 5:</strong> Framework CSS para a criação de um design responsivo e moderno.
 * Banco de Dados:
     * <strong>H2 Database:</strong> Banco de dados em memória para o ambiente de desenvolvimento e testes.
-    * <strong>PostgreSQL:</strong> Banco de dados relacional para o ambiente de produção.
+      
 * Build e Dependências:
     * <strong>Maven:</strong> Gerenciador de dependências e build do projeto.
     * <strong>Apache POI</strong> Biblioteca para a criação e manipulação de arquivos Excel.
