@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title th:text="${aluno.id == null} ? 'Novo Aluno' : 'Editar Aluno'"></title>
+</head>
+<body>
+    <section layout:fragment="content">
+        <h1 th:text="${aluno.id == null} ? 'Formulário de Novo Aluno' : 'Formulário de Edição de Aluno'"></h1>
+        <hr/>
+        <form th:action="@{/alunos/salvar}" th:object="${aluno}" method="post">
+            <input type="hidden" th:field="*{id}" />
+
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" th:field="*{nome}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" th:field="*{email}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="curso" class="form-label">Curso:</label>
+                <input type="text" class="form-control" th:field="*{curso}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:if="${#fields.hasErrors('curso')}" th:errors="*{curso}"></div>
+            </div>
+
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-check-circle-fill"></i> Salvar
+            </button>
+            <a th:href="@{/alunos}" class="btn btn-secondary">
+                <i class="bi bi-x-circle-fill"></i> Cancelar
+            </a>
+        </form>
+    </section>
+</body>
+</html>
